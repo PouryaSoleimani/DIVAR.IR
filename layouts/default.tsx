@@ -19,8 +19,8 @@ export default function DefaultLayout({
       </main>
       <footer className="w-full flex items-center justify-center py-3">
         <Link isExternal className="flex items-center gap-1 text-current" href="https://nextui-docs-v2.vercel.app?utm_source=next-pages-template" title="nextui.org homepage"  >
-          <span className="text-default-600">Powered by</span>
-          <p className="text-primary">NextUI</p>
+          <span className="text-default-600">Designed and Developed By</span>
+          <p className="text-danger">Pourya Soleimani</p>
         </Link>
       </footer>
     </div>

@@ -1,5 +1,6 @@
 {
 	"name": "next-pages-template",
+  "author": "Pourya Soleimani",
 	"version": "0.1.0",
 	"private": true,
   "type": "module",

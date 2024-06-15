@@ -1,8 +1,9 @@
+/* eslint-disable prettier/prettier */
 export type SiteConfig = typeof siteConfig;
 
 export const siteConfig = {
   name: "Divar.ir-Pourya Soleimani",
-  description: "Make beautiful websites regardless of your design experience.",
+  description: "A Fully Responsive Website , With Dark And Light theme , Inspired By Divar.ir , But Added a Little more Modern Stuffs to it ...",
   navItems: [
     {
       label: "Home",

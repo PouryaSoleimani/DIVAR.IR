@@ -50,13 +50,13 @@ export const Navbar = () => {
             <Button isExternal as={Link} className="text-sm font-semibold rounded-[7px] text-default-600 flex items-center" href={siteConfig.links.sponsor} startContent={<FaUserAlt className="text-default text-lg mr-1" />} variant="light"  >دیوار من</Button>
           </NavbarItem>
           <NavbarItem className="flex items-center">
-            <Button isExternal as={Link} className="text-sm font-semibold rounded-[7px] text-default-600 flex items-center" href={siteConfig.links.sponsor} startContent={<IoChatboxEllipses className="text-default text-lg translate-y-1 mr-1" />} variant="light"  > چت</Button>
+            <Button isExternal as={Link} className="text-sm font-semibold rounded-[7px] text-default-600 flex items-center" href={siteConfig.links.sponsor} startContent={<IoChatboxEllipses className="text-default text-lg translate-y-[1px] mr-1" />} variant="light"  > چت</Button>
           </NavbarItem>
           <NavbarItem className="flex items-center">
-            <Button isExternal as={Link} className="text-sm font-semibold rounded-[7px] text-default-600 flex items-center " href={siteConfig.links.sponsor} startContent={<MdOutlineSupport className="text-default text-lg translate-y-1 mr-1" />} variant="light"  > پشتیبانی</Button>
+            <Button isExternal as={Link} className="text-sm font-semibold rounded-[7px] text-default-600 flex items-center " href={siteConfig.links.sponsor} startContent={<MdOutlineSupport className="text-default text-lg translate-y-[1px] mr-1" />} variant="light"  > پشتیبانی</Button>
           </NavbarItem>
           <NavbarItem className="flex items-center">
-            <Button isExternal as={Link} className="text-sm font-semibold rounded-[7px] text-default-600 flex items-center " href={siteConfig.links.sponsor} startContent={<BiWorld className="text-default text-lg translate-y-1 mr-1" />} variant="light"  > زبان</Button>
+            <Button isExternal as={Link} className="text-sm font-semibold rounded-[7px] text-default-600 flex items-center " href={siteConfig.links.sponsor} startContent={<BiWorld className="text-default text-lg translate-y-[1px] mr-1" />} variant="light"  > زبان</Button>
           </NavbarItem>
         </div>
 

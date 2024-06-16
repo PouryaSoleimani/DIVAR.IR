@@ -1,5 +1,5 @@
 /* eslint-disable prettier/prettier */
-import { Fira_Code as FontMono, Inter as FontSans  } from "next/font/google";
+import { Fira_Code as FontMono, Inter as FontSans, Akatab  , Candal} from "next/font/google";
 
 export const fontSans = FontSans({
   subsets: ["latin"],
@@ -10,3 +10,9 @@ export const fontMono = FontMono({
   subsets: ["latin"],
   variable: "--font-mono",
 });
+
+export const candal = Candal({
+  subsets: ["latin"],
+  variable: "--font-alerta",
+  weight: "400"
+})

@@ -12,6 +12,10 @@ import { ThemeSwitch } from "@/components/theme-switch";
 import { TwitterIcon, GithubIcon, DiscordIcon, HeartFilledIcon, SearchIcon } from "@/components/icons";
 import { FaLocationDot } from "react-icons/fa6";
 import { FaChevronDown } from "react-icons/fa";
+import { FaUserAlt } from "react-icons/fa";
+import { IoChatboxEllipses } from "react-icons/io5";
+import { MdOutlineSupport } from "react-icons/md";
+import { BiWorld } from "react-icons/bi";
 import { Logo } from "@/components/icons";
 
 export const Navbar = () => {
@@ -24,7 +28,7 @@ export const Navbar = () => {
       <NavbarContent className="basis-1/5 sm:basis-full" justify="start">
         <NavbarBrand className="gap-3 max-w-fit">
           <NextLink className="flex justify-start items-center gap-1" href="/">
-            <Logo />  
+            <Logo />
           </NextLink>
         </NavbarBrand>
 
@@ -40,17 +44,22 @@ export const Navbar = () => {
       </NavbarContent>
 
 
-      <NavbarContent className="hidden sm:flex basis-1/5 sm:basis-full" justify="end" >
-        <div className="hidden lg:flex gap-2 justify-start ml-20">
-          {siteConfig.navItems.map((item) => (
-            <NavbarItem key={item.href}>
-              {/* <NextLink className={clsx(linkStyles({ color: "foreground" }), "data-[active=true]:text-primary data-[active=true]:font-medium",)} color="foreground" href={item.href} >
-                {item.label}
-              </NextLink> */}
-              <Button isExternal as={Link} className="text-sm font-semibold rounded-[7px] text-default-600 " href={siteConfig.links.sponsor} startContent={<FaChevronDown className="text-default text-xl translate-y-1 mr-1" />} variant="light"  >{item.label}</Button>
-            </NavbarItem>
-          ))}
+      <NavbarContent className="hidden sm:flex items-center basis-1/5 sm:basis-full" justify="end" >
+        <div className="hidden lg:flex justify-start items-center ml-8">
+          <NavbarItem className="flex items-center">
+            <Button isExternal as={Link} className="text-sm font-semibold rounded-[7px] text-default-600 flex items-center" href={siteConfig.links.sponsor} startContent={<FaUserAlt className="text-default text-lg mr-1" />} variant="light"  >دیوار من</Button>
+          </NavbarItem>
+          <NavbarItem className="flex items-center">
+            <Button isExternal as={Link} className="text-sm font-semibold rounded-[7px] text-default-600 flex items-center" href={siteConfig.links.sponsor} startContent={<IoChatboxEllipses className="text-default text-lg translate-y-1 mr-1" />} variant="light"  > چت</Button>
+          </NavbarItem>
+          <NavbarItem className="flex items-center">
+            <Button isExternal as={Link} className="text-sm font-semibold rounded-[7px] text-default-600 flex items-center " href={siteConfig.links.sponsor} startContent={<MdOutlineSupport className="text-default text-lg translate-y-1 mr-1" />} variant="light"  > پشتیبانی</Button>
+          </NavbarItem>
+          <NavbarItem className="flex items-center">
+            <Button isExternal as={Link} className="text-sm font-semibold rounded-[7px] text-default-600 flex items-center " href={siteConfig.links.sponsor} startContent={<BiWorld className="text-default text-lg translate-y-1 mr-1" />} variant="light"  > زبان</Button>
+          </NavbarItem>
         </div>
+
         <NavbarItem className="hidden sm:flex gap-2">
           <ThemeSwitch />
         </NavbarItem>

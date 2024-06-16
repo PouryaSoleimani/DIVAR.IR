@@ -1,5 +1,5 @@
 /* eslint-disable prettier/prettier */
-import { Fira_Code as FontMono, Inter as FontSans, Akatab  , Candal} from "next/font/google";
+import { Fira_Code as FontMono, Inter as FontSans, Candal } from "next/font/google";
 
 export const fontSans = FontSans({
   subsets: ["latin"],

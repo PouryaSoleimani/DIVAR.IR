@@ -18,9 +18,9 @@ export default function DefaultLayout({
         {children}
       </main>
       <footer className="w-full flex items-center justify-center py-3">
-        <Link isExternal className="flex items-center gap-1 text-current" href="https://github.com/PouryaSoleimani" title="nextui.org homepage"  >
+        <Link isExternal className="flex items-center gap-x-1 text-current" href="https://github.com/PouryaSoleimani" title="nextui.org homepage"  >
           <span className="text-default-600">Designed and Developed By</span>
-          <p className="text-red-700 font-semibold translate-y-.5">Pourya Soleimani</p>
+          <p className="text-red-700 font-bold ">Pourya Soleimani</p>
         </Link>
       </footer>
     </div>

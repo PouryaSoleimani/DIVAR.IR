@@ -15,7 +15,7 @@ export default function DefaultLayout({
     <div className="relative flex flex-col h-screen items-start justify-start p-0">
       <Head />
       <Navbar />
-      <main className="pt-8 w-screen flex-grow flex flex-row-reverse items-start justify-between ">
+      <main className="pt-8 w-screen flex-grow flex flex-row-reverse items-start justify-between overflow-x-hidden ">
         <Sidebar />
         {children}
       </main>

@@ -1,29 +1,29 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
+/* eslint-disable unused-imports/no-unused-imports */
 /* eslint-disable prettier/prettier */
 export type SiteConfig = typeof siteConfig;
+import { FaUserAlt } from "react-icons/fa";
 
 export const siteConfig = {
   name: "Divar.ir-Pourya Soleimani",
   description: "A Fully Responsive Website , With Dark And Light theme , Inspired By Divar.ir , But Added a Little more Modern Stuffs to it ...",
   navItems: [
     {
-      label: "Home",
+      label: "دیوار من",
       href: "/",
+      logo: "FaUserAlt"
     },
     {
-      label: "Docs",
+      label: "چت",
       href: "/docs",
     },
     {
-      label: "Pricing",
+      label: "پشتیبانی",
       href: "/pricing",
     },
     {
-      label: "Blog",
+      label: "زبان",
       href: "/blog",
-    },
-    {
-      label: "About",
-      href: "/about",
     },
   ],
   navMenuItems: [

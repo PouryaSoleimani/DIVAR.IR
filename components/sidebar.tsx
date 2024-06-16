@@ -2,6 +2,7 @@
 /* eslint-disable react/jsx-sort-props */
 /* eslint-disable prettier/prettier */
 import React from 'react'
+import { Accordion, AccordionItem } from "@nextui-org/react";
 import { TbBuildingEstate } from "react-icons/tb";
 import { IoCarSportOutline } from "react-icons/io5";
 import { HiOutlineDevicePhoneMobile } from "react-icons/hi2";
@@ -14,6 +15,8 @@ import { PiOfficeChairBold } from "react-icons/pi";
 import { PiSuitcaseBold } from "react-icons/pi";
 
 export const Sidebar = () => {
+  const defaultContent = "t enim ad .";
+
   return (
     <section className='flex flex-col items-start justify-start'>
       <div id="sideBarCategories" className='tracking-tighter h-fit pb-6 w-fit text-[14px] border-b border-zinc-300 flex items-start justify-start pr-4 text-zinc-500 leading-5 pl-16 '>
@@ -31,8 +34,27 @@ export const Sidebar = () => {
           <li className='flex flex-row-reverse items-center gap-2 cursor-pointer text-[10px] sm:text-[12px] leading-4 font-light hover:bg-zinc-200 px-2 py-1 rounded-lg'><PiSuitcaseBold className='w-6 h-6' />استخدام و کاریابی </li>
         </ul>
       </div>
-      <div id="sideBarPlace">
-        
+
+      <div id="sideBarAccordions" className='px-5 w-full'>
+        <Accordion
+          motionProps={{
+            variants: {
+              enter: { y: 0, opacity: 1, height: "auto", transition: { height: { type: "spring", stiffness: 500, damping: 30, duration: 1, }, opacity: { easings: "ease", duration: 1, }, }, },
+              exit: { y: -10, opacity: 0, height: 0, transition: { height: { easings: "ease", duration: 0.25, }, opacity: { easings: "ease", duration: 0.3, }, }, },
+            },
+          }}
+          className="text-zinc-4000"
+        >
+          <AccordionItem key="1" aria-label="محل" title="محل" className='flex flex-col items-end text-zinc-400'>
+            {defaultContent}
+          </AccordionItem>
+          <AccordionItem key="2" aria-label="قیمت" title="قیمت" className='flex flex-col items-end'>
+            {defaultContent}
+          </AccordionItem>
+          <AccordionItem key="3" aria-label="وضعیت آگهی" title="وضعیت آکهی" className='flex flex-col items-end'>
+            {defaultContent}
+          </AccordionItem>
+        </Accordion>
       </div>
     </section>
   )

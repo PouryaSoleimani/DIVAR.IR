@@ -2,7 +2,6 @@
 /* eslint-disable unused-imports/no-unused-imports */
 /* eslint-disable prettier/prettier */
 export type SiteConfig = typeof siteConfig;
-import { FaUserAlt } from "react-icons/fa";
 
 export const siteConfig = {
   name: "Divar.ir-Pourya Soleimani",

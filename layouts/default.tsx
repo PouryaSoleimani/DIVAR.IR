@@ -22,8 +22,8 @@ export default function DefaultLayout({
 
       <footer className="w-full flex items-center justify-center py-3">
         <Link isExternal className="flex items-center gap-x-1 text-current" href="https://github.com/PouryaSoleimani" title="nextui.org homepage"  >
-          <span className="text-default-600">Designed and Developed By</span>
-          <p className="text-red-700 font-bold ">Pourya Soleimani</p>
+          <span className="text-default-600 whitespace-nowrap">Designed and Developed By</span>
+          <p className="text-red-700 font-bold whitespace-nowrap">Pourya Soleimani</p>
         </Link>
       </footer>
     </div>

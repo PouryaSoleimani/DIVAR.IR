@@ -10,7 +10,7 @@ import SingleItem from "@/components/singleItem";
 export default function IndexPage() {
   return (
     <DefaultLayout>
-      <section className="flex flex-wrap items-start pl-8 justify-center gap-x-2">
+      <section className="flex flex-wrap items-center justify-center pl-2 space-x-2 w-full">
         <SingleItem />
         <SingleItem />
         <SingleItem />

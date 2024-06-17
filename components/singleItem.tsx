@@ -11,7 +11,7 @@ const SingleItem = () => {
         <h1>دوچرخه 24 گالانت</h1>
         <span className='flex flex-col items-end justify-around space-y-2'>
           <p className='text-sm text-zinc-400'>نو</p>
-          <p className='text-sm text-zinc-500 rtl'>تومان7/500/000   </p>
+          <p className='text-sm text-zinc-500 rtl font-normal'>تومان7/500/000   </p>
           <p className='text-sm text-zinc-500'>لحظاتی پیش در کیانمهر</p>
         </span>
       </div>

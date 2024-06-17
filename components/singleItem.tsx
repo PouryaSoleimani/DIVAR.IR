@@ -10,7 +10,7 @@ const SingleItem = () => {
       <div className='flex flex-col items-end justify-between'>
         <h1>دوچرخه 24 گالانت</h1>
         <span className='flex flex-col items-end justify-around space-y-2'>
-          <p className='text-sm text-zinc-400'>نو</p>
+          <p className='text-sm text-zinc-500'>نو</p>
           <p className='text-sm text-zinc-500 rtl flex flex-row gap-x-1 leading-3'>تومان<span>7/500/000</span>   </p>
           <p className='text-sm text-zinc-500'>لحظاتی پیش در کیانمهر</p>
         </span>

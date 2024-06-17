@@ -54,12 +54,12 @@ export const Sidebar = () => {
             <Button size='sm' radius='sm' className='hover:bg-red-800 hover:text-white'>همه</Button>
           </AccordionItem>
           <AccordionItem key="2" aria-label="محل" title="محل" className='flex flex-col items-end text-zinc-400'>
-            <Input placeholder='تعیین محل' size='md' radius='sm' dir='rtl' variant='bordered' accept='string' autoComplete='true' />
+            <Input className='w-[15rem]' placeholder='تعیین محل' size='md' radius='sm' dir='rtl' variant='bordered' accept='string' autoComplete='true' />
           </AccordionItem>
           <AccordionItem key="3" aria-label="قیمت" title="قیمت" className='flex flex-col items-end'>
-            <span className='flex flex-col px-2 space-y-1 w-full'>
-              <Input className='w-full' placeholder='حداقل' radius='sm' dir='rtl' variant='bordered' accept='string' autoComplete='true' />
-              <Input className='w-full' placeholder='حداکثر' radius='sm' dir='rtl' variant='bordered' accept='string' autoComplete='true' />
+            <span className='flex flex-col justify-end items-end px-2 space-y-1 w-full'>
+              <Input className='w-[15rem]' placeholder='حداقل' radius='sm' dir='rtl' variant='bordered' accept='string' autoComplete='true' />
+              <Input className='w-[15rem]' placeholder='حداکثر' radius='sm' dir='rtl' variant='bordered' accept='string' autoComplete='true' />
             </span>
           </AccordionItem>
           <AccordionItem key="4" aria-label="وضعیت کالا" title="وضعیت کالا" className='flex flex-col items-end '>
@@ -71,7 +71,7 @@ export const Sidebar = () => {
       </div>
 
       <div id="sideBarLogos" className='flex flex-col'>
-        <ul id="top" className='text-xs text-zinc-400 flex space-x-3 font-thin py-6'>
+        <ul id="top" className='text-xs text-zinc-400 flex space-x-3 font-thin py-2 items-center justify-center'>
           <li>درباره ی دیوار</li>
           <li>دریافت برنامه</li>
           <li>اتاق خبر</li>
@@ -80,11 +80,11 @@ export const Sidebar = () => {
           <li> کسب و کارها </li>
           <li> پشتیبانی و قوانین</li>
         </ul>
-        <div id='logos' className='flex items-center justify-around py-4 text-zinc-500 text-xl'>
-          <BsTelegram />
-          <FaLinkedin />
-          <RiInstagramFill />
-          <FaTwitter />
+        <div id='logos' className='flex items-center justify-around py-4 text-zinc-500 text-2xl'>
+          <BsTelegram className='hover:text-blue-500 cursor-pointer hover:scale-125 duration-300' />
+          <FaLinkedin className='hover:text-blue-800 cursor-pointer hover:scale-125 duration-300' />
+          <RiInstagramFill className='hover:text-red-500 cursor-pointer hover:scale-125 duration-300' />
+          <FaTwitter className='hover:text-sky-400 cursor-pointer hover:scale-125 duration-300' />
         </div>
         <div id="bottom" className='flex items-center justify-center py-2'>
           <Image src='/samandehi_logo.png' alt='logo' width={70} height={80} />

@@ -22,7 +22,7 @@ import Image from 'next/image';
 
 export const Sidebar = () => {
   return (
-    <section className='flex flex-col items-start justify-start pr-2'>
+    <section className='flex flex-col items-start justify-start pr-2'>  
 
       <div id="sideBarCategories" className='tracking-tighter h-fit pb-6 w-full text-[8px] sm:text-[14px] border-zinc-300 flex items-start justify-end pr-2 overflow-hidden text-zinc-500 leading-5 pl-16 '>
         <ul className='flex flex-col space-y-1 sm:space-y-5 font-thin tracking-tighter'>
@@ -37,7 +37,7 @@ export const Sidebar = () => {
           <li className='flex flex-row-reverse items-center gap-2 cursor-pointer whitespace-nowrap  sm:text-[12px] leading-4 font-light hover:bg-zinc-200 px-2 py-1 rounded-lg'><GoPeople className='w-6 h-6' />اجتماعی</li>
           <li className='flex flex-row-reverse items-center gap-2 cursor-pointer whitespace-nowrap sm:[12px] leading-4 font-light hover:bg-zinc-200 px-2 py-1 rounded-lg'><PiOfficeChairBold className='w-6 h-6' />تجهیزات و صنعتی</li>
           <li className='flex flex-row-reverse items-center gap-2 cursor-pointer whitespace-nowrap sm:text-[12px] leading-4 font-light hover:bg-zinc-200 px-2 py-1 rounded-lg'><PiSuitcaseBold className='w-6 h-6' />استخدام و کاریابی </li>
-        </ul>
+        </ul>    
       </div>
 
       <div id="sideBarAccordions" className='w-full'>

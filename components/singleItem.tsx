@@ -14,7 +14,7 @@ const SingleItem = (item: SingleItemType) => {
         <h1 className='whitespace-nowrap'>{item.title}</h1>
         <span className='flex flex-col items-end justify-around space-y-2'>
           <p className='text-sm text-zinc-500'>{item.status}</p>
-          <p className='text-sm text-zinc-500 rtl flex flex-row gap-x-1 leading-3'>تومان<span>{item.price.toLocaleString()}</span>   </p>
+          <p className='text-sm text-zinc-500 rtl flex flex-row gap-x-1 leading-3'>تومان<span>{item.price?.toLocaleString()}</span>   </p>
           <p className='text-sm text-zinc-500 whitespace-nowrap tracking-tighter'>لحظاتی پیش در <span>{item.location}</span></p>
         </span>
       </div>

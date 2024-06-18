@@ -24,7 +24,7 @@
       "views": 200,
       "price": 500000000,
       "status": "نو",
-      "location": "کرج ، گوهردشت",
+      "location": "کرج،گوهردشت",
       "img": "/3.webp"
     },
     {
@@ -44,6 +44,105 @@
       "status": "کارکرده",
       "location": "تهران،آزادی",
       "img": "/5.webp"
+    },
+    {
+      "id": 6,
+      "title": "خروس پنج ماه دورگه ",
+      "views": 146,
+      "price": 3000000,
+      "status": "کارکرده",
+      "location": " تهران",
+      "img": "/6.webp"
+    },
+    {
+      "id": 7,
+      "title": " میز نهار خوری شش نفره",
+      "views": 151,
+      "price": 5000000,
+      "status": "کارکرده",
+      "location": "کرج،عظیمیه",
+      "img": "/7.webp"
+    },
+    {
+      "id": 8,
+      "title": "مبل راحتی",
+      "views": 361,
+      "price": 6000000,
+      "status": "کارکرده",
+      "location": "کرج،مهرشهر",
+      "img": "/8.webp"
+    },
+    {
+      "id": 9,
+      "title": " یخچال فریزر",
+      "views": 371,
+      "price": 2000000,
+      "status": "کارکرده",
+      "location": "تهران ، دیباجی",
+      "img": "/9.webp"
+    },
+    {
+      "id": 10,
+      "title": "لوستر قدیمی",
+      "views": 221,
+      "price": 7000000,
+      "status": "کارکرده",
+      "location": "تهران ، افسریه",
+      "img": "/10.webp"
+    },
+    {
+      "id": 11,
+      "title": "میز تلویزیون",
+      "views": 811,
+      "price": 700000,
+      "status": "کارکرده",
+      "location": "تهران ،انقلاب",
+      "img": "/11.webp"
+    },
+    {
+      "id": 12,
+      "title": " 206 مدل 98",
+      "views": 141,
+      "price": 465000000,
+      "status": "کارکرده",
+      "location": "کرج،گلشهر",
+      "img": "/12.webp"
+    },
+    {
+      "id": 13,
+      "title": "گل سانسوریا",
+      "views": 191,
+      "price": 500000,
+      "status": "کارکرده",
+      "location": "کرج،محمدشهر",
+      "img": "/13.webp"
+    },
+    {
+      "id": 14,
+      "title": " نامی 170 در حد نو",
+      "views": 151,
+      "price": 9600000,
+      "status": "در حد نو",
+      "location": "تهران،هفت تیر",
+      "img": "/14.webp"
+    },
+    {
+      "id": 15,
+      "title": "PS5 پرو کاملا سالم",
+      "views": 271,
+      "price": 1850000,
+      "status": "در حد نو",
+      "location": " کرج،کمالشهر",
+      "img": "/15.webp"
+    },
+    {
+      "id": 16,
+      "title": " گوشی Galaxy S24 Ultra",
+      "views": 352,
+      "price": 6450000,
+      "status": "نو",
+      "location": " تهران،جمهوری",
+      "img": "/16.webp"
     }
   ],
   "users": [

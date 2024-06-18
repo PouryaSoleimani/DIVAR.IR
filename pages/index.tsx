@@ -12,7 +12,7 @@ type SingleItemType = { id: number, title: string, price: number, views: number,
 export default function IndexPage({ response }: DataType) {
   return (
     <DefaultLayout>
-      <section className="flex flex-wrap items-center justify-end pl-2 w-full">
+      <section className="flex flex-wrap items-center justify-center pl-2 w-full">
         {response.map(((item: SingleItemType) => <SingleItem key={item.id} {...item} />))}
       </section>
     </DefaultLayout>

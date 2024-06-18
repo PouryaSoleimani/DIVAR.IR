@@ -17,10 +17,10 @@ type SingleItemType = { id: number, title: string, location: string, img: string
 const SingleItemPage: NextPage<Props> = ({ response }) => {
   return (
     <>
-      <Navbar />
+      <Navbar />  
       <section className='flex items-start justify-between w-[85%] mx-auto p-10'>
         <div id="LEFT" className='w-1/2'>
-          <Image as={NextImage} src={response.img} width={700} height={600} />
+          <Image as={NextImage} isZoomed isBlurred src={response.img} width={700} height={600} />
         </div>
 
 

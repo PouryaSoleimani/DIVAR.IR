@@ -1,10 +1,10 @@
 /* eslint-disable prettier/prettier */
 import React from "react";
 import NextHead from "next/head";
-
 import { siteConfig } from "@/config/site";
 
 export const Head = () => {
+
   return (
     <NextHead>
       <title>{siteConfig.name}</title>

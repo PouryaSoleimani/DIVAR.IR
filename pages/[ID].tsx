@@ -12,6 +12,7 @@ import { FaBookmark } from "react-icons/fa6";
 import { FaPlus } from "react-icons/fa";
 import { AiFillLike } from "react-icons/ai";
 import { AiFillDislike } from "react-icons/ai";
+import 'animate.css';
 
 interface Props { response: { id: number, title: string, location: string, img: string, price: number, status: string } }
 type SingleItemType = { id: number, title: string, location: string, img: string, price: number, status: string }
@@ -21,11 +22,10 @@ const SingleItemPage: NextPage<Props> = ({ response }) => {
   return (
     <>
       <Navbar />
-      <section className='flex flex-col md:flex-row items-end md:items-start justify-between md:gap-x-16 w-screen md:w-[95%] mx-auto md:p-2 scale-85'>
-        <div id="LEFT" className='w-screen md:w-1/2'>
+      <section className='flex flex-col md:flex-row items-end md:items-start justify-between md:gap-x-16 w-screen md:w-[95%] mx-auto md:p-2 scale-85' >
+        <div id="LEFT" className='w-screen md:w-1/2 animate__animated animate__fadeIn'>
           <Image as={NextImage} isZoomed isBlurred src={response.img} width={900} height={600} className='w-full md:w-full' />
-          <Textarea dir='rtl' size='lg' placeholder='یادداشت شما' className='mt-10 font-bold text-xl text-zinc-600 overflow-y-auto' />
-          <p className='text-end md:pr-2 text-zinc-400 text-[12px] mt-1'>یادداشت تنها برای شما قابل دیدن است و پس از حذف آگهی، پاک خواهد شد</p>
+          <Textarea dir='rtl' size='lg' placeholder='یادداشت شما' radius='sm'  description='یادداشت تنها برای شما قابل دیدن است و پس از حذف آگهی، پاک خواهد شد' className='mt-6 resize-none font-bold text-xl text-zinc-600 overflow-y-auto text-end' />
           <Button size='lg' variant='bordered' radius='sm' endContent={<FaPlus className='translate-y-.5' />} className='md:w-full text-zinc-600 mt-10 mr-4 h-[80px] text-right text-2xl flex items-center justify-end'>ارزیابی قیمت</Button>
 
           <div className='flex flex-row-reverse items-center justify-between w-full mt-10 px-3 border-t pt-6'>
@@ -42,7 +42,7 @@ const SingleItemPage: NextPage<Props> = ({ response }) => {
         </div>
 
 
-        <div id="RIGHT" className='text-end w-screen md:w-1/2'>
+        <div id="RIGHT" className='text-end w-screen md:w-1/2 animate__animated animate__pulse'>
           <div className='text-end space-y-6 mt-4 md:mt-1 md:space-y-4 pb-2 w-full'>
             <h1 className='text-4xl whitespace-nowrap'>{response.title}</h1>
             <h2 className='text-zinc-600 text-xl'>{response.location}</h2>
@@ -116,6 +116,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
   return {
     paths: paths,
     fallback: false,
+    
   }
 }
 
@@ -127,6 +128,7 @@ export const getStaticProps: GetStaticProps = async (ctx) => {
 
   return {
     props: { response },
+    revalidate : 5000
   }
 }
 

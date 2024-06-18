@@ -24,7 +24,7 @@ export const Navbar = () => {
   );
 
   return (
-    <NextUINavbar maxWidth="full" position="sticky" dir="rtl" className="border-b pb-2 border-zinc-300 w-full overflow-x-hidden">
+    <NextUINavbar maxWidth="full" position="sticky" dir="rtl" className="border-b pb-2 border-zinc-300 w-full overflow-hidden">
       <NavbarContent className="basis-1/5 sm:basis-full" justify="start">
 
         <NavbarBrand className="gap-3 max-w-fit">

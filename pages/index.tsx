@@ -1,3 +1,4 @@
+//^ HOME PAGE ===============================================================================================================================================
 /* eslint-disable prettier/prettier */
 import DefaultLayout from "@/layouts/default";
 import SingleItem from "@/components/singleItem";
@@ -22,7 +23,7 @@ export const getStaticProps: GetStaticProps = async (ctx) => {
 
   const request = axios.get('http://localhost:5000/products')
   const response = (await request).data
-  
+
   return {
     props: { response },
     revalidate: 2000

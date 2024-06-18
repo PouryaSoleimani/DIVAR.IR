@@ -8,8 +8,8 @@ type SingleItemType = { id: number, title: string, location: string, img: string
 
 const SingleItem = (item: SingleItemType) => {
   return (
-    <div className='border-2 py-3 px-2 rounded-md mt-10 flex items-start justify-between gap-x-2 cursor-pointer m-1 w-[22rem] h-[10rem] hover:border-zinc-600 duration-300'>
-      <Image as={NextImage} isZoomed isBlurred radius='none' src={item.img} width={150} height={150} alt='Single-item-img' className=' h-[8.5rem] rounded-[2px]' />
+    <div className='border-2 py-3 px-2 rounded-md mt-10 flex items-start justify-between gap-x-2 cursor-pointer m-1 w-[23rem] h-[10rem] hover:border-zinc-600 duration-300'>
+      <Image as={NextImage} isZoomed isBlurred radius='none' src={item.img} width={150} height={150} alt='Single-item-img' className='max-w-36 h-[8.5rem] rounded-[2px]' />
       <div className='flex flex-col items-end justify-between gap-y-10'>
         <h1 className='whitespace-nowrap'>{item.title}</h1>
         <span className='flex flex-col items-end justify-around space-y-2'>

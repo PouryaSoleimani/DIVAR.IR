@@ -24,8 +24,8 @@ const SingleItemPage: NextPage<Props> = ({ response }) => {
       <Navbar />
       <section className='flex flex-col md:flex-row items-end md:items-start justify-between md:gap-x-16 w-screen md:w-[95%] mx-auto md:p-2 scale-85' >
         <div id="LEFT" className='w-screen md:w-1/2 animate__animated animate__fadeIn'>
-          <Image as={NextImage} isZoomed isBlurred src={response.img} width={900} height={600} className='w-full md:w-full' />
-          <Textarea dir='rtl' size='lg' placeholder='یادداشت شما' radius='sm'  description='یادداشت تنها برای شما قابل دیدن است و پس از حذف آگهی، پاک خواهد شد' className='mt-6 resize-none font-bold text-xl text-zinc-600 overflow-y-auto text-end' />
+          <Image as={NextImage} isZoomed isBlurred src={response.img} width={900} height={600} alt='Single Product Image' className='w-full md:w-full' />
+          <Textarea dir='rtl' size='lg' placeholder='یادداشت شما' radius='sm' description='یادداشت تنها برای شما قابل دیدن است و پس از حذف آگهی، پاک خواهد شد' className='mt-6 resize-none font-bold text-xl text-zinc-600 overflow-y-auto text-end' />
           <Button size='lg' variant='bordered' radius='sm' endContent={<FaPlus className='translate-y-.5' />} className='md:w-full text-zinc-600 mt-10 mr-4 h-[80px] text-right text-2xl flex items-center justify-end'>ارزیابی قیمت</Button>
 
           <div className='flex flex-row-reverse items-center justify-between w-full mt-10 px-3 border-t pt-6'>
@@ -78,27 +78,35 @@ const SingleItemPage: NextPage<Props> = ({ response }) => {
             </span>
           </div>
 
-          <div className='text-xl flex text-foreground/80 py-10'>
-            <p className='text-ellipsis'>
-              توضیحات
-              (((**گروه تولیدی درب بابازاده**)))
-              بزرگترین تولیدکننده و توضیع کننده دربهای ساختمانی
-
-              بالاترین کیفیت و پایین ترین قیمت
-              ****در کل استان البرز****
-              به صورت تک و عمده و قابل مذاکره با انبوه سازان
-              ✅️درب لابی✅️درب ضدسرقت ✅️درب اتاق و سرویس و حمام ✅️چهارچوب فلزی و چوبی و ضدآب
-              ✅️کاور چهارچوب ضدسرقت و اتاقی
-              ✅️قفل و دستگیره هوشمند اثرانگشتی و کارتی
-              ✅️دستگیره دربهای اتاق و سرویس
-
-              جهت کسب اطلاعات بیشتر با کارشناسان فروش این مجموعه در تماس باشید
-
-              **ساعت بازدید 9:00 الی 18:00**
-
-              **** پخش مرکزی درب بابازاده****
-              ♦️آدرس و لوکیشن پایین آگهی میباشد♦️
-            </p>
+          <div className='text-lg whitespace-pre-wrap tracking-wider truncate... text-pretty break-after-all text-foreground/80 py-10 leading-loose'>
+            توضیحات
+            باسلام خدمت دوست داران مبل آرمه
+            بزرگترین تولید کننده مبلمان کلاسیک وسلطنتی
+            تنوع بسیار بالایی درنمونه کارهای کوئین وفرانسوی
+            ست ۵نفره
+            شامل یک کاناپه ۳نفره و دومبل کوئین یا فرانسوی
+            ۲۲۸۰۰
+            ست ۷نفره
+            شامل یک کاناپه۳نفره دومبل کوئین ودومبل فرانسوی
+            ۳۰۵۰۰
+            ست ۸نفره
+            شامل یک کاناپه ۳نفره یک چستر ۳نفره ودومبل کوئین یا فرانسوی
+            ۳۴۵۰۰
+            قیمت جلو مبلی وعسلی ابزاری ست کار ۴۵۰۰
+            تمام چوب راش به شرط کارشناسی
+            تنوع بسیار بالایی درنوع پارچه
+            ایرانی وچینی
+            تنوع بسیاربالایی دررنگهای چوب (سندبلاست،کهنه کاری،پتینه کاری ،فندقی، سفید،طلایی،صیقلی و..‌‌‌....)
+            دارای ست کامل جهیزیه عروس
+            غذا خوری ۲،۴،۶،۸،۱۰،۱۲
+            کنسول وتی وی ،جاکفشی،بوفه،سرویس خواب،آینه قدی،شزلون،لاوست،
+            تخفیف ویژه برای عروس خانومای عزیزمون
+            و شرایط اقساط
+            کف فوم سرد برند پیک فوم
+            ۲۴ماه ضمانت تعویض
+            ۳۶ماه ضمانت چوب
+            شمارو دعوت به بازدید حضوری از مجموع مبلمان آرمه میکنیم تا از نزدیک مراحل کارو مشاهده کنید.
+            اماده همکاری بانمایشگاه داران عزیزهستیم
           </div>
 
         </div>
@@ -116,7 +124,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
   return {
     paths: paths,
     fallback: false,
-    
+
   }
 }
 
@@ -128,7 +136,7 @@ export const getStaticProps: GetStaticProps = async (ctx) => {
 
   return {
     props: { response },
-    revalidate : 5000
+    revalidate: 5000
   }
 }
 

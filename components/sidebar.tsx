@@ -58,8 +58,8 @@ export const Sidebar = () => {
           </AccordionItem>
           <AccordionItem key="3" aria-label="قیمت" title="قیمت" className='flex flex-col items-end'>
             <span className='flex flex-col justify-end items-end px-2 space-y-1 w-full'>
-              <Input className='w-[15rem]' placeholder='حداقل' radius='sm' dir='rtl' variant='bordered' accept='string' autoComplete='true' />
-              <Input className='w-[15rem]' placeholder='حداکثر' radius='sm' dir='rtl' variant='bordered' accept='string' autoComplete='true' />
+              <Input className='w-[14rem]' placeholder='حداقل' radius='sm' dir='rtl' variant='bordered' accept='string' autoComplete='true' />
+              <Input className='w-[14rem]' placeholder='حداکثر' radius='sm' dir='rtl' variant='bordered' accept='string' autoComplete='true' />
             </span>
           </AccordionItem>
           <AccordionItem key="4" aria-label="وضعیت کالا" title="وضعیت کالا" className='flex flex-col items-end '>

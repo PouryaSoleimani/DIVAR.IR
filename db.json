@@ -143,6 +143,42 @@
       "status": "نو",
       "location": " تهران،جمهوری",
       "img": "/16.webp"
+    },
+    {
+      "id": 17,
+      "title": "هایما S7",
+      "views": 322,
+      "price": 14650000,
+      "status": "کارکرده",
+      "location": " کرج،جهانشهر",
+      "img": "/17.webp"
+    },
+    {
+      "id": 18,
+      "title": "گوشی iphone 6s",
+      "views": 162,
+      "price": 450000,
+      "status": "کارکرده",
+      "location": " تهران،هفت تیر",
+      "img": "/18.webp"
+    },
+    {
+      "id": 19,
+      "title": "کتاب زبان - گرامر",
+      "views": 362,
+      "price": 350000,
+      "status": "کارکرده",
+      "location": "کرج،منظریه",
+      "img": "/19.webp"
+    },
+    {
+      "id": 20,
+      "title": "گل مصنوعی",
+      "views": 62,
+      "price": 250000,
+      "status": "کارکرده",
+      "location": "تهران،یافت آباد",
+      "img": "/20.webp"
     }
   ],
   "users": [

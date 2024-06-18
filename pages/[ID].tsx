@@ -1,6 +1,6 @@
 //^ DYNAMIC PRODUCT DETAILS PAGE =========================================================================================================================================== 
 import { Navbar } from '@/components/navbar'
-import { Button, Image } from '@nextui-org/react'
+import { Button, Image, Textarea } from '@nextui-org/react'
 import axios from 'axios'
 import { NextPage, GetStaticPaths, GetStaticProps } from 'next'
 import NextImage from 'next/image'
@@ -17,27 +17,27 @@ type SingleItemType = { id: number, title: string, location: string, img: string
 const SingleItemPage: NextPage<Props> = ({ response }) => {
   return (
     <>
-      <Navbar />  
-      <section className='flex items-start justify-between w-[85%] mx-auto p-10'>
-        <div id="LEFT" className='w-1/2'>
-          <Image as={NextImage} isZoomed isBlurred src={response.img} width={700} height={600} />
+      <Navbar />
+      <section className='flex flex-col md:flex-row items-end md:items-start justify-between md:gap-x-16 w-screen md:w-[85%] mx-auto md:p-2 md:p-10 scale-95'>
+        <div id="LEFT" className='w-screen md:w-1/2'>
+          <Image as={NextImage} isZoomed isBlurred src={response.img} width={800} height={600} className='w-screen md:w-full' />
         </div>
 
 
-        <div id="RIGHT" className='text-end w-1/2'>
-          <div className='text-end space-y-4 pb-2 w-full'>
-            <h1 className='text-4xl'>{response.title}</h1>
+        <div id="RIGHT" className='text-end w-screen md:w-1/2'>
+          <div className='text-end space-y-6 mt-4 md:mt-1 md:space-y-4 pb-2 w-full'>
+            <h1 className='text-4xl whitespace-nowrap'>{response.title}</h1>
             <h2 className='text-zinc-600 text-xl'>{response.location}</h2>
           </div>
 
           <div className='border-t border-b my-6 py-2 flex items-center justify-end'>
-            <Button endContent={<CgDanger className='w-8 h-8 text-red-700' />} startContent={<FaChevronCircleLeft className='w-6 h-6' />} className='my-3 py-6 text-md text-foreground/60 hover:scale-110 duration-500 flex items-center justify-end'>زنگ خظر های قبل از معامله</Button>
+            <Button endContent={<CgDanger className='w-8 h-8 text-red-700' />} startContent={<FaChevronCircleLeft className='w-6 h-6' />} className='my-3 py-6 w-fit whitespace-pre-wrap text-sm md:text-md text-foreground/60 hover:scale-110 duration-500 flex items-center justify-end'>زنگ خظر های قبل از معامله</Button>
           </div>
 
-          <div className='flex items-center justify-between flex-row-reverse space-x-1'>
+          <div className='flex items-center justify-between space-y-2 flex-row-reverse space-x-1 w-full'>
             <span className='flex items-center justify-end space-x-1'>
-              <Button radius='sm' size="lg" className='text-xl p-8'>چت</Button>
-              <Button radius='sm' size="lg" className='text-xl bg-red-900 text-white p-8'>اطلاعات تماس</Button>
+              <Button radius='sm' size="lg" className='md:text-xl p-8'>چت</Button>
+              <Button radius='sm' size="lg" className='md:text-xl bg-red-900 text-white p-8'>اطلاعات تماس</Button>
             </span>
             <span className='flex items-center justify-center space-x-4'>
               <FaShareNodes className='w-12 h-12 hover:bg-zinc-300/50 hover:scale-110 rounded-full p-2 duration-300 cursor-pointer' />
@@ -50,7 +50,7 @@ const SingleItemPage: NextPage<Props> = ({ response }) => {
               <p>وضعیت</p>
               <p>{response.status}</p>
             </span>
-            <span className='py-6 flex items-center justify-between w-full px-4 my-4 text-xl text-foreground/70 border-b flex-row-reverse'>
+            <span className='py-6 flex items-center whitespace-pre-line justify-between w-full px-4 my-4 text-xl text-foreground/70 border-b flex-row-reverse'>
               <p>آخرین به روزرسانی</p>
               <p>نیم ساعت پیش</p>
             </span>
@@ -60,8 +60,8 @@ const SingleItemPage: NextPage<Props> = ({ response }) => {
             </span>
           </div>
 
-          <div className='text-xl text-foreground/80 py-10'>
-            <p className='whitespace-pre leading text-wrap'>
+          <div className='text-xl flex text-foreground/80 py-10'>
+            <p className='text-ellipsis'>
               توضیحات
               (((**گروه تولیدی درب بابازاده**)))
               بزرگترین تولیدکننده و توضیع کننده دربهای ساختمانی

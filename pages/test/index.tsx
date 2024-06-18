@@ -7,21 +7,22 @@ import SingleItem from '@/components/singleItem'
 import { Sidebar } from '@/components/sidebar'
 import { GetStaticProps } from 'next'
 
-
 interface DataType { response: [{ id: number, title: string, price: number, views: number, status: string, location: string, img: string }] }
 type SingleItemType = { id: number, title: string, price: number, views: number, status: string, location: string, img: string }
-function TestPage({ response }: DataType) {
 
+function TestPage({ response }: DataType) {
+  console.log(response)
   return (
     <div className='flex flex-row-reverse'>
       <Sidebar />
-      {response.map(((item: SingleItemType) => (<SingleItem key={item.id} {...item} />)))}
+      {response.map(((item: SingleItemType) => <SingleItem key={item.id} {...item} />))}
     </div>
   )
 }
 
 
 export const getStaticProps: GetStaticProps = async (ctx) => {
+
   const request = axios.get('http://localhost:5000/products')
   const response = (await request).data
 

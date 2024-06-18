@@ -1,31 +1,15 @@
 {
-  "posts": [
+  "products": [
     {
-      "id": "1",
-      "title": "a title",
-      "views": 100
-    },
-    {
-      "id": "2",
-      "title": "another title",
-      "views": 200
+      "id": 1,
+      "title": "دوچرخه 24 گالانت",
+      "views": 100,
+      "price": 7500000,
+      "status": "نو",
+      "location": "کیانمهر",
+      "img": "/ac35c186-cdc1-4d65-b520-d9288a0db8c9.webp"
     }
   ],
-  "comments": [
-    {
-      "id": "1",
-      "text": "a comment about post 1",
-      "postId": "1"
-    },
-    {
-      "id": "2",
-      "text": "another comment about post 1",
-      "postId": "1"
-    }
-  ],
-  "profile": {
-    "name": "typicode"
-  },
   "users": [
     {
       "id": 1,

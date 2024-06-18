@@ -1,6 +1,5 @@
 /* eslint-disable react/jsx-sort-props */
 /* eslint-disable prettier/prettier */
-
 import { Image } from '@nextui-org/react'
 import React from 'react'
 

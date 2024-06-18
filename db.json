@@ -8,6 +8,15 @@
       "status": "نو",
       "location": "کیانمهر",
       "img": "/ac35c186-cdc1-4d65-b520-d9288a0db8c9.webp"
+    },
+    {
+      "id": 2,
+      "title": " سامسونگ گلکسی a33 ",
+      "views": 200,
+      "price": 9500000,
+      "status": "کارکرده",
+      "location": "تهران",
+      "img": "/2"
     }
   ],
   "users": [

@@ -12,7 +12,7 @@ export default function DefaultLayout({
   children: React.ReactNode;
 }) {
   return (
-    <div className="relative flex flex-col h-screen items-start justify-start p-0">
+    <div className="relative flex flex-col h-screen items-start justify-start p-0 overflow-x-hidden">
       <Head />
       <Navbar />
       <main className="pt-8 w-screen h-screen flex-grow flex flex-row-reverse items-start justify-start gap-x-6 overflow-x-hidden ">

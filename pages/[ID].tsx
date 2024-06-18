@@ -9,6 +9,9 @@ import { CgDanger } from "react-icons/cg";
 import { FaChevronCircleLeft } from "react-icons/fa";
 import { FaShareNodes } from "react-icons/fa6";
 import { FaBookmark } from "react-icons/fa6";
+import { FaPlus } from "react-icons/fa";
+import { AiFillLike } from "react-icons/ai";
+import { AiFillDislike } from "react-icons/ai";
 
 interface Props { response: { id: number, title: string, location: string, img: string, price: number, status: string } }
 type SingleItemType = { id: number, title: string, location: string, img: string, price: number, status: string }
@@ -18,9 +21,24 @@ const SingleItemPage: NextPage<Props> = ({ response }) => {
   return (
     <>
       <Navbar />
-      <section className='flex flex-col md:flex-row items-end md:items-start justify-between md:gap-x-16 w-screen md:w-[85%] mx-auto md:p-2 md:p-10 scale-95'>
+      <section className='flex flex-col md:flex-row items-end md:items-start justify-between md:gap-x-16 w-screen md:w-[95%] mx-auto md:p-2 scale-85'>
         <div id="LEFT" className='w-screen md:w-1/2'>
-          <Image as={NextImage} isZoomed isBlurred src={response.img} width={800} height={600} className='w-screen md:w-full' />
+          <Image as={NextImage} isZoomed isBlurred src={response.img} width={900} height={600} className='w-full md:w-full' />
+          <Textarea dir='rtl' size='lg' placeholder='یادداشت شما' className='mt-10 font-bold text-xl text-zinc-600 overflow-y-auto' />
+          <p className='text-end md:pr-2 text-zinc-400 text-[12px] mt-1'>یادداشت تنها برای شما قابل دیدن است و پس از حذف آگهی، پاک خواهد شد</p>
+          <Button size='lg' variant='bordered' radius='sm' endContent={<FaPlus className='translate-y-.5' />} className='md:w-full text-zinc-600 mt-10 mr-4 h-[80px] text-right text-2xl flex items-center justify-end'>ارزیابی قیمت</Button>
+
+          <div className='flex flex-row-reverse items-center justify-between w-full mt-10 px-3 border-t pt-6'>
+            <h3 className='text-xl leading-loose'>بازخورد شما دربارهٔ این آگهی چیست؟</h3>
+            <span className='flex items-center justify-end space-x-3 md:text-2xl'>
+              <AiFillLike className='w-12 h-12 hover:bg-zinc-300/50 hover:scale-110 rounded-full p-2 duration-300 cursor-pointer text-emerald-600' />
+              <AiFillDislike className='w-12 h-12 hover:bg-zinc-300/50 hover:scale-110 rounded-full p-2 duration-300 cursor-pointer text-red-800' />
+            </span>
+          </div>
+
+          <div className='border-t my-6 py-2 flex items-center justify-end'>
+            <Button endContent={<CgDanger className='w-8 h-8 text-red-700' />} startContent={<FaChevronCircleLeft className='w-6 h-6' />} className='my-3 py-6 w-fit whitespace-pre-wrap text-sm md:text-md text-foreground/60 hover:scale-110 duration-500 flex items-center justify-end'>گزارش کلاهبرداری و رفتار مشکوک</Button>
+          </div>
         </div>
 
 

@@ -3,20 +3,27 @@
 /* eslint-disable unused-imports/no-unused-imports */
 /* eslint-disable react/jsx-sort-props */
 /* eslint-disable prettier/prettier */
-import { Button, Kbd, Link, Input, Navbar as NextUINavbar, NavbarContent, NavbarMenu, NavbarMenuToggle, NavbarBrand, NavbarItem, NavbarMenuItem, link as linkStyles, } from "@nextui-org/react";
+import { Button, Link, Input, Navbar as NextUINavbar, NavbarContent, NavbarMenu, NavbarMenuToggle, NavbarBrand, NavbarItem, NavbarMenuItem } from "@nextui-org/react";
+import { Dropdown, DropdownTrigger, DropdownMenu, DropdownItem } from "@nextui-org/react";
 import NextLink from "next/link";
 import clsx from "clsx";
 
 import { siteConfig } from "@/config/site";
 import { ThemeSwitch } from "@/components/theme-switch";
-import { TwitterIcon, GithubIcon, DiscordIcon, HeartFilledIcon, SearchIcon } from "@/components/icons";
+import { SearchIcon } from "@/components/icons";
 import { FaLocationDot } from "react-icons/fa6";
 import { FaChevronDown } from "react-icons/fa";
 import { FaUserAlt } from "react-icons/fa";
-import { IoChatboxEllipses } from "react-icons/io5";
+import { IoCarSportOutline, IoChatboxEllipses } from "react-icons/io5";
 import { MdOutlineSupport } from "react-icons/md";
 import { BiWorld } from "react-icons/bi";
 import { Logo } from "@/components/icons";
+import { TbBuildingEstate } from "react-icons/tb";
+import { HiOutlineDevicePhoneMobile } from "react-icons/hi2";
+import { LuDices, LuLamp } from "react-icons/lu";
+import { PiOfficeChairBold, PiPaintBrushBroadBold, PiSuitcaseBold } from "react-icons/pi";
+import { BsSmartwatch } from "react-icons/bs";
+import { GoPeople } from "react-icons/go";
 
 export const Navbar = () => {
   const searchInput = (
@@ -36,9 +43,31 @@ export const Navbar = () => {
         <NavbarItem className="hidden md:flex">
           <Button isExternal as={Link} className="text-sm font-semibold rounded-[7px] text-default-600 bg-default-100" href={siteConfig.links.sponsor} startContent={<FaLocationDot className="text-default text-xl" />} variant="flat"  >   تهران  </Button>
         </NavbarItem>
+
+
         <NavbarItem className="hidden md:flex">
-          <Button isExternal as={Link} className="text-sm font-semibold rounded-[7px] text-default-600 bg-default-100" href={siteConfig.links.sponsor} endContent={<FaChevronDown className="text-default text-xl translate-y-1 mr-1" />} variant="flat"  >   دسته ها  </Button>
+          <Dropdown backdrop="blur">
+            <DropdownTrigger>
+              <Button className="text-sm font-semibold rounded-[7px] text-default-600 bg-default-100" endContent={<FaChevronDown className="text-default text-xl translate-y-1 mr-1" />} variant="flat"  >   دسته ها  </Button>
+            </DropdownTrigger>
+
+            <DropdownMenu variant="faded" aria-label="Static Actions" dir="rtl" className="text-4xl font-extrabold px-2 py-3  ">
+              <DropdownItem startContent={<TbBuildingEstate />} key="realstate"><p className="text-xl">املاک</p></DropdownItem>
+              <DropdownItem startContent={<IoCarSportOutline />} key="vehicles"> <p className="text-xl">وسایل نقلیه</p></DropdownItem>
+              <DropdownItem startContent={<HiOutlineDevicePhoneMobile />} key="digitals"><p className="text-xl">کالای دیجیتال </p></DropdownItem>
+              <DropdownItem startContent={<LuLamp />} key="homeappliances"> <p className="text-xl">خانه و آشپزخانه</p></DropdownItem>
+              <DropdownItem startContent={<PiPaintBrushBroadBold />} key="homeappliances"> <p className="text-xl"> خدمات </p></DropdownItem>
+              <DropdownItem startContent={<BsSmartwatch />} key="homeappliances"> <p className="text-xl"> وسایل شخصی </p></DropdownItem>
+              <DropdownItem startContent={<LuDices />} key="homeappliances"> <p className="text-xl">سرگرمی</p></DropdownItem>
+              <DropdownItem startContent={<GoPeople />} key="homeappliances"> <p className="text-xl">اجتماعی</p></DropdownItem>
+              <DropdownItem startContent={<PiOfficeChairBold />} key="homeappliances"> <p className="text-xl">تجهیزات و صنعتی</p></DropdownItem>
+              <DropdownItem startContent={<PiSuitcaseBold />} key="homeappliances"> <p className="text-xl"> استخدام و کاریابی </p></DropdownItem>
+            </DropdownMenu>
+
+          </Dropdown>
         </NavbarItem>
+
+
 
         <NavbarItem className="hidden lg:flex">{searchInput}</NavbarItem>
 

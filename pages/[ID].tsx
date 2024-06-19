@@ -23,10 +23,12 @@ const SingleItemPage: NextPage<Props> = ({ response }) => {
     <>
       <Navbar />
       <section className='flex flex-col md:flex-row items-end md:items-start justify-between md:gap-x-16 w-screen md:w-[95%] mx-auto md:p-2 scale-85' >
+
         <div id="LEFT" className='w-screen md:w-1/2 animate__animated animate__fadeIn'>
           <Image as={NextImage} isZoomed isBlurred src={response.img} width={900} height={600} alt='Single Product Image' className='w-full md:w-full' />
           <Textarea dir='rtl' size='lg' placeholder='یادداشت شما' radius='sm' description='یادداشت تنها برای شما قابل دیدن است و پس از حذف آگهی، پاک خواهد شد' className='mt-6 resize-none font-bold text-xl text-zinc-600 overflow-y-auto text-end' />
           <Button size='lg' variant='bordered' radius='sm' endContent={<FaPlus className='translate-y-.5' />} className='md:w-full text-zinc-600 mt-10 mr-4 h-[80px] text-right text-2xl flex items-center justify-end'>ارزیابی قیمت</Button>
+          <Image as={NextImage} isZoomed isBlurred src='/map.png' width={900} height={600} alt='Single Product Image' className='w-full md:w-full mt-10 cursor-pointer' />
 
           <div className='flex flex-row-reverse items-center justify-between w-full mt-10 px-3 border-t pt-6'>
             <h3 className='text-xl leading-loose'>بازخورد شما دربارهٔ این آگهی چیست؟</h3>
@@ -39,9 +41,10 @@ const SingleItemPage: NextPage<Props> = ({ response }) => {
           <div className='border-t my-6 py-2 flex items-center justify-end'>
             <Button endContent={<CgDanger className='w-8 h-8 text-red-700' />} startContent={<FaChevronCircleLeft className='w-6 h-6' />} className='my-3 py-6 w-fit whitespace-pre-wrap text-sm md:text-md text-foreground/60 hover:scale-110 duration-500 flex items-center justify-end'>گزارش کلاهبرداری و رفتار مشکوک</Button>
           </div>
+
         </div>
 
-
+    
         <div id="RIGHT" className='text-end w-screen md:w-1/2 animate__animated animate__pulse'>
           <div className='text-end space-y-6 mt-4 md:mt-1 md:space-y-4 pb-2 w-full'>
             <h1 className='text-4xl whitespace-nowrap'>{response.title}</h1>
@@ -110,6 +113,7 @@ const SingleItemPage: NextPage<Props> = ({ response }) => {
           </div>
 
         </div>
+
       </section>
     </>
 

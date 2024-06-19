@@ -44,7 +44,7 @@ const SingleItemPage: NextPage<Props> = ({ response }) => {
 
         </div>
 
-    
+
         <div id="RIGHT" className='text-end w-screen md:w-1/2 animate__animated animate__pulse'>
           <div className='text-end space-y-6 mt-4 md:mt-1 md:space-y-4 pb-2 w-full'>
             <h1 className='text-4xl whitespace-nowrap'>{response.title}</h1>

@@ -49,22 +49,22 @@ export const Sidebar = () => {
             },
           }} className="text-zinc-400 w-full"  >
           <AccordionItem key="1" aria-label="آگهی دهنده" title="نوع آگهی دهنده" className='flex flex-col border-zinc-300 items-end text-zinc-400 py-1'>
-            <Button size='sm' radius='sm' className='hover:bg-red-800 hover:text-white'>فروشگاه</Button>
-            <Button size='sm' radius='sm' className='hover:bg-red-800 hover:text-white'>شخصی</Button>
+            <Button size='sm' radius='sm' className='hover:bg-red-800 hover:text-white mr-1'>فروشگاه</Button>
+            <Button size='sm' radius='sm' className='hover:bg-red-800 hover:text-white mr-1'>شخصی</Button>
             <Button size='sm' radius='sm' className='hover:bg-red-800 hover:text-white'>همه</Button>
           </AccordionItem>
           <AccordionItem key="2" aria-label="محل" title="محل" className='flex flex-col items-end text-zinc-400'>
-            <Input className='w-[15rem]' placeholder='تعیین محل' size='md' radius='sm' dir='rtl' variant='bordered' accept='string' autoComplete='true' />
+            <Input className='w-[14.5rem]' placeholder='تعیین محل' size='md' radius='sm' dir='rtl' variant='bordered' accept='string' autoComplete='true' />
           </AccordionItem>
           <AccordionItem key="3" aria-label="قیمت" title="قیمت" className='flex flex-col items-end'>
-            <span className='flex flex-col justify-end items-end px-2 space-y-1 w-full'>
-              <Input className='w-[14rem]' placeholder='حداقل' radius='sm' dir='rtl' variant='bordered' accept='string' autoComplete='true' />
-              <Input className='w-[14rem]' placeholder='حداکثر' radius='sm' dir='rtl' variant='bordered' accept='string' autoComplete='true' />
+            <span className='flex flex-col justify-end items-end space-y-1 w-fit'>
+              <Input className='w-[14.5rem]' placeholder='حداقل' radius='sm' dir='rtl' variant='bordered' accept='string' autoComplete='true' />
+              <Input className='w-[14.5rem]' placeholder='حداکثر' radius='sm' dir='rtl' variant='bordered' accept='string' autoComplete='true' />
             </span>
           </AccordionItem>
-          <AccordionItem key="4" aria-label="وضعیت کالا" title="وضعیت کالا" className='flex flex-col items-end '>
-            <Button size='sm' radius='sm' className='hover:bg-red-800 hover:text-white'>در حد تو</Button>
-            <Button size='sm' radius='sm' className='hover:bg-red-800 hover:text-white'>کارکرده</Button>
+          <AccordionItem key="4" aria-label="وضعیت کالا" title="وضعیت کالا" className='flex flex-col items-end'>
+            <Button size='sm' radius='sm' className='hover:bg-red-800 hover:text-white mr-1'>در حد تو</Button>
+            <Button size='sm' radius='sm' className='hover:bg-red-800 hover:text-white mr-1'>کارکرده</Button>
             <Button size='sm' radius='sm' className='hover:bg-red-800 hover:text-white'>آکبند</Button>
           </AccordionItem>
         </Accordion>

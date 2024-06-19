@@ -17,8 +17,8 @@ export default function IndexPage({ response }: DataType) {
     <DefaultLayout>
       <section className="flex flex-wrap items-center justify-center pl-2 w-full overflow-hidden">
         {response.map(((item: SingleItemType) => (
-          <Link href={`/${item.id}`} className="animate__animated animate__pulse">
-            <SingleItem key={item.id} {...item} />
+          <Link href={`/${item.id}`} key={item.id} className="animate__animated animate__pulse">
+            <SingleItem {...item} />
           </Link>
         )))}
       </section>

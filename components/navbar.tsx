@@ -24,6 +24,12 @@ import { LuDices, LuLamp } from "react-icons/lu";
 import { PiOfficeChairBold, PiPaintBrushBroadBold, PiSuitcaseBold } from "react-icons/pi";
 import { BsSmartwatch } from "react-icons/bs";
 import { GoPeople } from "react-icons/go";
+import { Noto_Sans_Arabic } from 'next/font/google'
+
+const inter = Noto_Sans_Arabic({
+  subsets: ['arabic'],
+  weight: "700"
+})
 
 export const Navbar = () => {
   const searchInput = (
@@ -51,7 +57,7 @@ export const Navbar = () => {
               <Button className="text-sm font-semibold rounded-[7px] text-default-600 bg-default-100" endContent={<FaChevronDown className="text-default text-xl translate-y-1 mr-1" />} variant="flat"  >   دسته ها  </Button>
             </DropdownTrigger>
 
-            <DropdownMenu variant="faded" aria-label="Static Actions" dir="rtl" className="text-4xl font-extrabold px-2 py-3  ">
+            <DropdownMenu variant="faded" aria-label="Static Actions" dir="rtl" className={`text-4xl font-extrabold p-2 ${inter.className}`}>
               <DropdownItem startContent={<TbBuildingEstate />} key="realstate"><p className="text-xl">املاک</p></DropdownItem>
               <DropdownItem startContent={<IoCarSportOutline />} key="vehicles"> <p className="text-xl">وسایل نقلیه</p></DropdownItem>
               <DropdownItem startContent={<HiOutlineDevicePhoneMobile />} key="digitals"><p className="text-xl">کالای دیجیتال </p></DropdownItem>

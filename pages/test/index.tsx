@@ -13,10 +13,12 @@ type SingleItemType = { id: number, title: string, price: number, views: number,
 function TestPage({ response }: DataType) {
   console.log(response)
   return (
+
     <div className='flex flex-row-reverse'>
       <Sidebar />
       {response.map(((item: SingleItemType) => <SingleItem key={item.id} {...item} />))}
     </div>
+    
   )
 }
 

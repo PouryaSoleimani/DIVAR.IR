@@ -2,7 +2,7 @@
   "name": "next-pages-template",
   "author": "Pourya Soleimani",
   "version": "0.1.0",
-  "private": true,
+  "private": "false",
   "type": "commonjs",
   "scripts": {
     "dev": "next dev",

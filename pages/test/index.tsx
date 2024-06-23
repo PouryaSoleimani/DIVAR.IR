@@ -11,14 +11,14 @@ interface DataType { response: [{ id: number, title: string, price: number, view
 type SingleItemType = { id: number, title: string, price: number, views: number, status: string, location: string, img: string }
 
 function TestPage({ response }: DataType) {
-  console.log(response)
+
   return (
 
     <div className='flex flex-row-reverse'>
       <Sidebar />
       {response.map(((item: SingleItemType) => <SingleItem key={item.id} {...item} />))}
     </div>
-    
+
   )
 }
 

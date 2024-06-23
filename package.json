@@ -8,8 +8,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "server": " json-server-auth -w db.json -p 7000",
-    "lint": "eslint . --ext .ts,.tsx -c .eslintrc.json --fix"
+    "server": " json-server-auth -w db.json -p 7000"
   },
   "dependencies": {
     "@nextui-org/react": "2.4.1",
